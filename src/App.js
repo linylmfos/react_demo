@@ -1,5 +1,8 @@
 import React from 'react';
 import MyComponent from './MyCom'
+import StateCom from './StateCom'
+import StateCom2 from './StateCom2'
+import PropsRender from './PropsRender';
 import './App.css';
 
 function App() {
@@ -25,6 +28,10 @@ function App() {
     <h4 key={item.id}>{item.str}</h4>
   ));
   let mcpt = <MyComponent name={name} age={age} />
+
+  let obj = {
+    a: 5
+}
   return (
     <div>
       <div className="App">
@@ -36,6 +43,22 @@ function App() {
           }
         </ul>
       </div>
+      <h4>
+        <hr />
+        <StateCom />
+        <hr />
+      </h4>
+      <p>
+        <PropsRender />
+      </p>
+      <p>
+        
+        <StateCom2 a={5} obj={obj} >
+          <span id="ss1">aaa</span>
+          <span id="ss2">bbb</span>
+        </StateCom2>
+        <hr />
+      </p>
       <div>
         {children}
       </div>
