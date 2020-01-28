@@ -3,6 +3,9 @@ import MyComponent from './MyCom'
 import StateCom from './StateCom'
 import StateCom2 from './StateCom2'
 import PropsRender from './PropsRender';
+import ForceUpdate from './ForceUpdate';
+import Life from './Life'
+import ShouldCom from './ShouldCom'
 import './App.css';
 
 function App() {
@@ -43,6 +46,11 @@ function App() {
           }
         </ul>
       </div>
+
+      <div>
+        <ShouldCom />
+      </div>
+      
       <h4>
         <hr />
         <StateCom />
@@ -51,8 +59,13 @@ function App() {
       <p>
         <PropsRender />
       </p>
+      <h6 style={{color: 'green', backgroundColor: '#F00'}}>
+        <ForceUpdate a={5} />
+      </h6>
+      <p style={{background: '#FF0'}}>
+        <Life />
+      </p>
       <p>
-        
         <StateCom2 a={5} obj={obj} >
           <span id="ss1">aaa</span>
           <span id="ss2">bbb</span>
