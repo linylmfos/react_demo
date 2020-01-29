@@ -6,6 +6,10 @@ import PropsRender from './PropsRender';
 import ForceUpdate from './ForceUpdate';
 import Life from './Life'
 import ShouldCom from './ShouldCom'
+import WillUnmount from './WillUnmount';
+import Trans from './Trans'
+import Refer from './Refer'
+import RefComm from './RefComm'
 import './App.css';
 
 function App() {
@@ -38,6 +42,19 @@ function App() {
   return (
     <div>
       <div className="App">
+        <h1>
+          <RefComm />
+          <hr />
+        </h1>
+        <h1>
+          <Refer />
+        </h1>
+        <p>
+          <Trans  />
+        </p>
+        <p>
+          <WillUnmount />
+        </p>
         <ul>
           {
             users.map((item, index) => (
@@ -50,7 +67,7 @@ function App() {
       <div>
         <ShouldCom />
       </div>
-      
+
       <h4>
         <hr />
         <StateCom />
